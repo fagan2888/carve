@@ -1,0 +1,6 @@
+*checkpoints*
+*.pyc
+*~
+*#
+data
+supplementary
