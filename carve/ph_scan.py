@@ -34,8 +34,9 @@ class PhScan():
 
         # -- renormalize by hand
         print("WARNING: NORMALIZATION FACTORS SET BY HAND")
-        self.fac    = np.array([1.260825e-02, 9.713071e-03, 1.103623e-02, 
-                           1.224380e-02])
+#         self.fac    = np.array([1.260825e-02, 9.713071e-03, 1.103623e-02, 
+#                            1.224380e-02])
+        self.fac    = np.ones(4)
         self.norm   = self.fac / self.fac.max()
         self.imnorm = self.imgs.transpose(1, 2, 0) * self.norm
 
