@@ -1,0 +1,17 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#ndvi-label {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 1em 1.5em;
+	background: black;
+	color: white;
+}
+
+.phimages {
+	max-width: 100%;
+}

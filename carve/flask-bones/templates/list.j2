@@ -1,0 +1,9 @@
+{% extends 'base.j2' %}
+
+{% block content %}
+	<ul>
+	{% for img in imgs %}
+		<li><a href="{{ url_for('view', filename=img) }}">{{ img }}</a></li>
+	{% endfor %}
+	</ul>
+{% endblock %}

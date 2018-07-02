@@ -1,0 +1,25 @@
+{% extends 'base.j2' %}
+
+{% block content %}
+	{{ body }}
+	<img src="{{ url_for('image', filename=filename) }}" class='phimages' alt='' />
+	<div id="ndvi-label">
+		<div>
+			Location:
+			<span class="lat"></span>,
+			<span class="lon"></span>
+		</div>
+		<div>
+			Health: 
+			<span class="health"></span>
+			(<span class="ndvi"></span>)
+		</div>
+	</div>
+
+	<script>
+		var coords = {{ coords|tojson }};
+		var ndvi = {{ ndvi|tojson }};
+		var ndvishp = {{ ndvishp|tojson }};
+		console.log(coords);
+	</script>
+{% endblock %}
