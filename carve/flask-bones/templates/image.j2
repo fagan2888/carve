@@ -1,7 +1,21 @@
 {% extends 'base.j2' %}
 
 {% block content %}
-	{{ body }}
+	<div id='nav'>
+		<form>
+			<select id='select-image' name='i'>
+				{% for i, fname in filenames %}
+					<option value='{{ i }}' {{ 'selected' if fname == filename }}>{{ fname }}</option>
+				{% endfor %}
+			</select>
+			<button id="go-to-image" type='submit'>View Image</button>
+		</form>
+
+		<form action="{{ url_for('export', filename=filename) }}" >
+			<button type='submit'>Export</button>
+		</form>
+	</div>
+
 	<img src="{{ url_for('image', filename=filename) }}" class='phimages' alt='' />
 	<div id="ndvi-label">
 		<div>

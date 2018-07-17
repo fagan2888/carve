@@ -26,6 +26,7 @@ class PhScan():
         print("extracting to array... "), 
         t0       = time.time()
         self.img = self.rast.ReadAsArray()
+        self._img = self.img.copy()
         print("(extracted in {0}s)".format(time.time() - t0))
 
         # -- rescale to 0 to 1
